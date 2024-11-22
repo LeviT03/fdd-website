@@ -1,0 +1,131 @@
+:root {
+    --color-1: #d1f3f9; /* Lichtste kleur */
+    --color-2: #a3ebf4;
+    --color-3: #76ddee;
+    --color-4: #48d2e9;
+    --color-5: #1ac7e4;
+    --color-6: #159fb6;
+    --color-7: #107788; 
+    --color-8: #0a4f5b; /* Donkerste kleur */
+    --accent-color: #1ac1dd; /* Accentkleur */
+
+    /* Lettertype */
+    --font-family-base: 'JetBrains Mono', monospace;
+    --font-size-base: 16px;
+    --line-height-base: 1.5;
+}
+
+/* Algemene stijl voor het document */
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-8); 
+    background-color: var(--color-1); 
+}
+
+/* Stijl voor het logo */
+#logo {
+    width: 150px; 
+    height: auto;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    background: var(--color-8); 
+    padding: 40px;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; 
+}
+
+nav ul {
+    list-style-type: none; 
+    display: flex;
+    justify-content: space-around; /* Verdeel items gelijkmatig */
+    flex-grow: 1; /* Zorg dat de lijst flexibel groeit */
+    padding: 0; 
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px; /* Minder ruime marge tussen items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Geen onderlijning */
+    color: rgb(255, 255, 255); /* Witte tekstkleur */
+    font-family: var(--font-family-base); 
+    font-size: var(--font-size-base); 
+    transition: color 0.3s; /* Voor een vloeiende overgang van kleur */
+}
+
+nav ul li a:hover,
+nav ul li a:visited {
+    color: rgb(255, 255, 255); /* Blijf wit bij hover en na klikken */
+}
+
+/* Actieve linkstijl */
+nav ul li a.active {
+    border-bottom: 2px solid var(--accent-color); /* Accentkleur als onderstreping */
+    padding-bottom: 5px; /* Ruimte tussen de tekst en de onderstreping */
+}
+
+/* Knoppen */
+button {
+    background-color: var(--color-4);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: var(--font-family-base);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-6); /* Donkerdere kleur bij hover */
+}
+
+/* Hoofdsectie van de pagina */
+.main-section {
+    display: flex;
+    flex-direction: column; /* Plaats items onder elkaar */
+    align-items: center; /* Centreer items horizontaal */
+    justify-content: center; /* Centreer items verticaal */
+    min-height: 80vh; /* Vul 80% van de viewporthoogte */
+    padding: 20px;
+    background-color: var(--color-2);
+}
+
+/* Algemene stijl voor secties */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--color-3);
+    color: var(--color-8);
+    margin: 20px 0;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.section-content {
+    font-size: var(--font-size-base);
+    max-width: 800px;
+    text-align: center;
+}
+
+
+
+
+
